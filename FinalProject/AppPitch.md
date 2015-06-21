@@ -2,6 +2,8 @@ AppPitch
 ========================================================
 author: Caitlin Hart
 date: June 21, 2015
+width: 1280
+height: 1020
 
 Application Summary
 ========================================================
@@ -33,43 +35,11 @@ str(swiss)
 
 Screenshot
 ========================================================
-
+![Screenshot](Example1.png)
 
 Example Output
 ========================================================
-This is an example of the output that the user will see when the app is started.
-
-```r
-model1 <- lm(Examination~.,data=swiss)
-summary(model1)
-```
-
-```
-
-Call:
-lm(formula = Examination ~ ., data = swiss)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--9.0429 -2.8491 -0.5308  3.0459  6.8874 
-
-Coefficients:
-                 Estimate Std. Error t value Pr(>|t|)   
-(Intercept)      24.57200    8.23969   2.982  0.00480 **
-Fertility        -0.09523    0.09371  -1.016  0.31546   
-Agriculture      -0.08254    0.04387  -1.881  0.06705 . 
-Education         0.33037    0.12858   2.569  0.01392 * 
-Catholic         -0.06778    0.02108  -3.215  0.00254 **
-Infant.Mortality  0.09730    0.25297   0.385  0.70250   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 4.353 on 41 degrees of freedom
-Multiple R-squared:  0.7346,	Adjusted R-squared:  0.7022 
-F-statistic:  22.7 on 5 and 41 DF,  p-value: 7.624e-11
-```
-
-This is what they will see after they select paramters *Education* and *Infant Mortality* and click the "Submit" button.
+This is what the user will see after they select paramters *Education* and *Infant Mortality* and click the "Submit" button.
 
 ```r
 model2 <- lm(Examination~Education+Infant.Mortality,data=swiss)
