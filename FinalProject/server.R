@@ -4,6 +4,7 @@ shinyServer(
       function(input,output){
             output$Ans <- renderPrint({
                   input$goButton
+                  rm(list=ls())
                   parms <- as.list(input$id1)
                   if (length(parms) == 5) {
                         model<-lm(Examination~.,data=swiss)

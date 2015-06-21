@@ -1,0 +1,42 @@
+AppPitch
+========================================================
+author: Caitlin Hart
+date: June 21, 2015
+
+Application Summary
+========================================================
+
+This app allows users to select the predictors to a linear model using the **swiss** 
+data set and *Examination* as the dependent variable.
+
+The users select the predictors with checkboxes and are presented with the summary 
+of resulting model. They can then re-select predictors to improve the model.
+
+Data Summary
+========================================================
+
+```{r "loaddata", echo = FALSE}
+library(datasets)
+data(swiss)
+```
+```{r "data"}
+str(swiss)
+```
+
+Screenshot
+========================================================
+
+
+Example Output
+========================================================
+This is an example of the output that the user will see when the app is started.
+```{r "model"}
+model1 <- lm(Examination~.,data=swiss)
+summary(model1)
+```
+
+This is what they will see after they select paramters *Education* and *Infant Mortality* and click the "Submit" button.
+```{r "model2"}
+model2 <- lm(Examination~Education+Infant.Mortality,data=swiss)
+summary(model2)
+```
